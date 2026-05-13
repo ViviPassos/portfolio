@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitoria Maria — Desenvolvedora Fullstack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Archivo:wght@400;500&family=Roboto+Mono:wght@500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="pre-logo">VM<span>.</span>dev</div>
+    <div class="pre-bar-wrap">
+      <div class="pre-bar"></div>
+    </div>
+    <div class="pre-status">Inicializando<span class="pre-dots"></span></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">VM<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+        <li><a href="#experiencia" data-pt="Experiência" data-en="Experience">Experiência</a></li>
+        <li><a href="#formacao" data-pt="Educação" data-en="Education">Educação</a></li>
+        <li><a href="#tecnologias" data-pt="Tecnologias" data-en="Technologies">Tecnologias</a></li>
+        <li><a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a></li>
+        <li><a href="#contato" data-pt="Contato" data-en="Contact">Contato</a></li>
+      </ul>
+      <div class="nav-social">
+        <a href="https://github.com/ViviPassos" target="_blank" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/vitoria-passos-179610254/" target="_blank" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" id="langBtn">PT</button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option active" data-lang="pt"><span class="lang-flag">🇧🇷</span> Português</div>
+          <div class="lang-option" data-lang="en"><span class="lang-flag">🇺🇸</span> English</div>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-left reveal">
+          <div class="hero-eyebrow"><span data-pt="Desenvolvedora Fullstack · Manaus, AM"
+              data-en="Fullstack Developer · Manaus, AM">Desenvolvedora Fullstack · Manaus, AM</span></div>
+          <h1 class="hero-name">
+            VITORIA
+            <span class="line2">MARIA.</span>
+          </h1>
+          <div class="hero-role-wrap">
+            <div class="hero-role">
+              <div data-pt="Angular &amp; TypeScript" data-en="Angular &amp; TypeScript">Angular &amp; TypeScript</div>
+              <div data-pt="PHP / Slim Framework" data-en="PHP / Slim Framework">PHP / Slim Framework</div>
+              <div data-pt="Frontend &amp; Backend" data-en="Frontend &amp; Backend">Frontend &amp; Backend</div>
+            </div>
+          </div>
+          <a href="#" class="btn-primary" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7,10 12,15 17,10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span data-pt="Baixar CV" data-en="Download CV">Baixar CV</span>
+          </a>
+        </div>
+        <div class="hero-deco reveal reveal-d2">
+          <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="200" cy="200" r="185" stroke="#8C1946" stroke-width=".8" />
+            <circle cx="200" cy="200" r="140" stroke="#D4C5B0" stroke-width=".4" />
+            <circle cx="200" cy="200" r="90" stroke="#8C1946" stroke-width=".8" />
+            <circle cx="200" cy="200" r="40" stroke="#D4C5B0" stroke-width=".4" />
+            <line x1="15" y1="200" x2="385" y2="200" stroke="#D4C5B0" stroke-width=".4" />
+            <line x1="200" y1="15" x2="200" y2="385" stroke="#D4C5B0" stroke-width=".4" />
+            <line x1="69" y1="69" x2="331" y2="331" stroke="#8C1946" stroke-width=".4" />
+            <line x1="331" y1="69" x2="69" y2="331" stroke="#8C1946" stroke-width=".4" />
+            <ellipse cx="200" cy="200" rx="185" ry="60" stroke="#D4C5B0" stroke-width=".5"
+              transform="rotate(-25 200 200)" />
+            <rect x="193" y="193" width="14" height="14" stroke="#8C1946" stroke-width="1"
+              transform="rotate(45 200 200)" />
+            <circle cx="200" cy="15" r="3" fill="#8C1946" />
+            <circle cx="200" cy="385" r="3" fill="#8C1946" />
+            <circle cx="15" cy="200" r="3" fill="#8C1946" />
+            <circle cx="385" cy="200" r="3" fill="#8C1946" />
+            <text x="206" y="38" fill="#D4C5B0" font-family="monospace" font-size="9" opacity=".7">N</text>
+            <text x="362" y="204" fill="#D4C5B0" font-family="monospace" font-size="9" opacity=".7">E</text>
+            <text x="206" y="378" fill="#D4C5B0" font-family="monospace" font-size="9" opacity=".7">S</text>
+            <text x="18" y="204" fill="#D4C5B0" font-family="monospace" font-size="9" opacity=".7">W</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJETOS ── -->
+  <section id="projetos">
+    <div class="container">
+      <div class="section-label">// <span data-pt="Projetos" data-en="Projects">Projetos</span></div>
+      <h2 class="section-title"><span data-pt="Projetos" data-en="Projects">Projetos</span> <span>Relevantes</span></h2>
+      <p class="section-sub"
+        data-pt="Projetos pessoais e realizados com vínculo empregatício, nos quais atuei no time de desenvolvimento."
+        data-en="Personal projects and those developed through employment, in which I worked as part of the development team.">
+        Projetos pessoais e realizados com vínculo empregatício, nos quais atuei no time de desenvolvimento.</p>
+
+      <div class="proj-track-wrap reveal">
+        <div class="proj-track" id="projTrack">
+
+          <div class="proj-card">
+            <div class="proj-img"><img src="assets/img/niko.png" alt="Niko Trudel" /></div>
+            <div class="proj-body">
+              <div class="proj-idx">● PROJETO 01</div>
+              <div class="proj-name">Niko Trudel</div>
+              <div class="proj-type"><span data-pt="Site Institucional + Cardápio + Dashboard"
+                  data-en="Institutional Site + Menu + Dashboard">Site Institucional + Cardápio + Dashboard</span></div>
+              <p class="proj-desc"><span
+                  data-pt="Site completo com cardápio online integrado e painel admin para gestão de itens do menu em tempo real."
+                  data-en="Complete site with integrated online menu and admin panel for real-time item management.">Site
+                  completo com cardápio online integrado e painel admin para gestão de itens do menu em tempo
+                  real.</span></p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span
+                  class="tag">Firebase</span>
+              </div>
+              <a href="https://sitenikotrudel.web.app/" target="_blank" rel="noopener" class="proj-link">
+                Ver projeto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-img"><img src="assets/img/siah.png" alt="Siah" /></div>
+            <div class="proj-body">
+              <div class="proj-idx">● PROJETO 02</div>
+              <div class="proj-name">Siah Software &amp; Serviços</div>
+              <div class="proj-type" data-pt="Site Institucional" data-en="Institutional Site">Site Institucional</div>
+              <p class="proj-desc"><span
+                  data-pt="Site institucional desenvolvido internamente, apresentando segmentos, soluções e clientes da empresa."
+                  data-en="Institutional site developed in-house, showcasing the company's segments, solutions and clients.">Site
+                  institucional desenvolvido internamente, apresentando segmentos, soluções e clientes da
+                  empresa.</span></p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+                <span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">SCSS</span>
+              </div>
+              <a href="https://sitesiah.web.app/" target="_blank" rel="noopener" class="proj-link">
+                Ver projeto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-img"><img src="assets/img/voa.png" alt="Voa Contábil" /></div>
+            <div class="proj-body">
+              <div class="proj-idx">● PROJETO 03</div>
+              <div class="proj-name">Voa Contábil</div>
+              <div class="proj-type">Site + Blog + Painel Admin</div>
+              <p class="proj-desc"><span
+                  data-pt="Site para escritório de contabilidade com blog integrado e painel de administração para gestão de artigos com CRUD completo."
+                  data-en="Accounting office site with integrated blog and admin panel for full CRUD article management.">Site
+                  para escritório de contabilidade com blog integrado e painel de administração para gestão de artigos
+                  com CRUD completo.</span></p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">PHP</span><span
+                  class="tag">MySQL</span>
+              </div>
+              <a href="https://voacontabil.com.br/" target="_blank" rel="noopener" class="proj-link">
+                Ver projeto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-img"><img src="assets/img/am.png" alt="AM Consultoria" /></div>
+            <div class="proj-body">
+              <div class="proj-idx">● PROJETO 04</div>
+              <div class="proj-name">AM Consultoria Qualisan</div>
+              <div class="proj-type">Site + Blog + Painel Admin</div>
+              <p class="proj-desc"><span
+                  data-pt="Site para consultoria em segurança alimentar com blog técnico e painel admin para publicação de artigos."
+                  data-en="Food safety consultancy site with a technical blog and admin panel for article publishing.">Site
+                  para consultoria em segurança alimentar com blog técnico e painel admin para publicação de
+                  artigos.</span></p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">PHP</span><span
+                  class="tag">MySQL</span>
+              </div>
+              <a href="https://amconsultoriaqualisan.com.br/" target="_blank" rel="noopener" class="proj-link">
+                Ver projeto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-img-placeholder">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#8C1946" stroke-width="1.2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <polyline points="9,22 9,12 15,12 15,22" />
+              </svg>
+            </div>
+            <div class="proj-body">
+              <div class="proj-idx">● PROJETO 05 · ACADÊMICO</div>
+              <div class="proj-name">CondoSync</div>
+              <div class="proj-type"><span data-pt="Sistema de Gerenciamento de Condomínios"
+                  data-en="Condominium Management System">Sistema de Gerenciamento de Condomínios</span></div>
+              <p class="proj-desc"><span
+                  data-pt="Projeto integrador final do SENAI. Sistema colaborativo com APIs REST e banco de dados, dividido entre equipes e setores."
+                  data-en="SENAI final integrator project. Collaborative system using REST APIs and database, split across teams and departments.">Projeto
+                  integrador final do SENAI. Sistema colaborativo com APIs REST e banco de dados, dividido entre equipes
+                  e setores.</span></p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span
+                  class="tag">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="proj-dots" id="projDots">
+        <button class="proj-dot active" data-idx="0"></button>
+        <button class="proj-dot" data-idx="1"></button>
+        <button class="proj-dot" data-idx="2"></button>
+        <button class="proj-dot" data-idx="3"></button>
+        <button class="proj-dot" data-idx="4"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIÊNCIA ── -->
+  <section id="experiencia">
+    <div class="container">
+      <div class="section-label">// <span data-pt="Experiência" data-en="Experience">Experiência</span></div>
+      <h2 class="section-title"><span data-pt="Experiência" data-en="Experience">Experiência</span> <span
+          data-pt="Profissional" data-en="Professional">Profissional</span></h2>
+      <p class="section-sub"
+        data-pt="Conheça minha trajetória profissional, da atuação mais recente aos primeiros passos."
+        data-en="Discover my professional journey, from the most recent role to the first steps.">Conheça minha
+        trajetória profissional, da atuação mais recente aos primeiros passos.</p>
+
+      <div class="timeline-wrap reveal">
+        <div class="tl-line"></div>
+        <div class="tl-items">
+
+          <div class="tl-item left">
+            <div class="tl-card">
+              <div class="tl-status"><span class="sdot"></span> <span data-pt="ATUAL" data-en="CURRENT">ATUAL</span>
+              </div>
+              <div class="tl-date">11/2024 — PRESENTE</div>
+              <div class="tl-role" data-pt="Desenvolvedora Júnior Fullstack" data-en="Junior Fullstack Developer">
+                Desenvolvedora Júnior Fullstack</div>
+              <div class="tl-company">Siah Software &amp; Serviços</div>
+              <p class="tl-desc"><span
+                  data-pt="Desenvolvimento de aplicações web completas com Angular e TypeScript no frontend e PHP/Slim com SQL Server no backend. Projetos para clientes de diferentes segmentos."
+                  data-en="Development of complete web applications with Angular and TypeScript on the frontend and PHP/Slim with SQL Server on the backend. Projects for clients across different industries.">Desenvolvimento
+                  de aplicações web completas com Angular e TypeScript no frontend e PHP/Slim com SQL Server no backend.
+                  Projetos para clientes de diferentes segmentos.</span></p>
+              <div class="tl-tags"><span class="tag">Angular</span><span class="tag">TypeScript</span><span
+                  class="tag">PHP</span><span class="tag">Slim</span><span class="tag">SQL Server</span></div>
+            </div>
+            <div class="tl-center">
+              <div class="tl-dot active"></div>
+            </div>
+            <div class="tl-empty"></div>
+          </div>
+
+          <div class="tl-item right">
+            <div class="tl-empty"></div>
+            <div class="tl-center">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-card">
+              <div class="tl-status done"><span class="sdot"></span> <span data-pt="CONCLUÍDO"
+                  data-en="COMPLETED">CONCLUÍDO</span></div>
+              <div class="tl-date">11/2024 — 04/2026 · Estágio</div>
+              <div class="tl-role" data-pt="Estagiária de Desenvolvimento" data-en="Development Intern">Estagiária de
+                Desenvolvimento</div>
+              <div class="tl-company">Siah Software &amp; Serviços</div>
+              <p class="tl-desc"><span
+                  data-pt="Início na Siah como estagiária. Desenvolvimento frontend com Angular e integração com APIs PHP, aprendendo as práticas internas da empresa."
+                  data-en="Started at Siah as an intern. Frontend development with Angular and PHP API integration, learning the company's internal practices.">Início
+                  na Siah como estagiária. Desenvolvimento frontend com Angular e integração com APIs PHP, aprendendo as
+                  práticas internas da empresa.</span></p>
+              <div class="tl-tags"><span class="tag">Angular</span><span class="tag">HTML/CSS</span><span
+                  class="tag">PHP</span><span class="tag">Git</span></div>
+            </div>
+          </div>
+
+          <div class="tl-item left">
+            <div class="tl-card">
+              <div class="tl-status done"><span class="sdot"></span> CONCLUÍDO</div>
+              <div class="tl-date">09/2025 — 11/2025 · 3 meses</div>
+              <div class="tl-role" data-pt="Estagiária em TI" data-en="IT Intern">Estagiária em TI</div>
+              <div class="tl-company">Selbetti</div>
+              <p class="tl-desc"><span
+                  data-pt="Suporte técnico de 1º nível presencial e remoto. Formatação e configuração de computadores, manutenção preventiva e corretiva, documentação técnica."
+                  data-en="1st level on-site and remote technical support. Computer formatting and configuration, preventive and corrective maintenance, technical documentation.">Suporte
+                  técnico de 1º nível presencial e remoto. Formatação e configuração de computadores, manutenção
+                  preventiva e corretiva, documentação técnica.</span></p>
+              <div class="tl-tags"><span class="tag">Suporte TI</span><span class="tag">Hardware</span><span
+                  class="tag">Software</span><span class="tag">Redes</span></div>
+            </div>
+            <div class="tl-center">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-empty"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FORMAÇÃO ── -->
+  <section id="formacao">
+    <div class="container">
+      <div class="section-label">// <span data-pt="Educação" data-en="Education">Educação</span></div>
+      <h2 class="section-title"><span data-pt="Formação" data-en="Education">Formação</span> <span data-pt="Acadêmica"
+          data-en="">Acadêmica</span></h2>
+      <p class="section-sub" data-pt="Todas as minhas formações, cursos e certificados!"
+        data-en="All my degrees, courses and certificates!">Todas as minhas formações, cursos e certificados!</p>
+
+      <div class="edu-tabs">
+        <button class="edu-tab active" data-tab="academica" data-pt="Formação Acadêmica"
+          data-en="Academic Background">Formação Acadêmica</button>
+        <button class="edu-tab" data-tab="cursos" data-pt="Cursos e Certificados"
+          data-en="Courses &amp; Certificates">Cursos e Certificados</button>
+      </div>
+
+      <!-- FORMAÇÃO ACADÊMICA -->
+      <div class="edu-panel active" id="panel-academica">
+
+        <div class="edu-item reveal">
+          <div class="edu-item-header">
+            <div class="edu-item-left">
+              <div class="edu-inst-name">UNINTER</div>
+              <div class="edu-degree-name">Bacharelado em Ciência da Computação</div>
+            </div>
+            <div class="edu-dates">Em andamento &nbsp;·&nbsp; Previsão: 2027</div>
+          </div>
+          <div class="edu-desc">
+            <span
+              data-pt="Graduação com foco em fundamentos de computação, algoritmos, estruturas de dados, engenharia de software, sistemas operacionais, redes e inteligência artificial. Formação sólida que aprofunda a base técnica para atuação fullstack."
+              data-en="Degree focused on computing fundamentals, algorithms, data structures, software engineering, operating systems, networks and artificial intelligence. A solid foundation that deepens technical skills for fullstack development.">Graduação
+              com foco em fundamentos de computação, algoritmos, estruturas de dados, engenharia de software, sistemas
+              operacionais, redes e inteligência artificial. Formação sólida que aprofunda a base técnica para atuação
+              fullstack.</span>
+          </div>
+          <div class="edu-status-row">
+            <div class="edu-badge"><span class="bdot"></span> <span data-pt="Em Progresso" data-en="In Progress">Em
+                Progresso</span></div>
+          </div>
+        </div>
+
+        <div class="edu-item reveal">
+          <div class="edu-item-header">
+            <div class="edu-item-left">
+              <div class="edu-inst-name">SENAI/SC</div>
+              <div class="edu-degree-name">Técnico em Análise e Desenvolvimento de Sistemas</div>
+            </div>
+            <div class="edu-dates">2024 &nbsp;·&nbsp; 2025</div>
+          </div>
+          <div class="edu-desc">
+            <span
+              data-pt="Formação técnica com foco em desenvolvimento web, banco de dados, lógica de programação e engenharia de software. Projeto integrador final: CondoSync — sistema completo de gerenciamento de condomínios com PHP, MySQL, JavaScript e APIs REST."
+              data-en="Technical training focused on web development, databases, programming logic and software engineering. Final integrating project: CondoSync — a complete condominium management system using PHP, MySQL, JavaScript and REST APIs.">Formação
+              técnica com foco em desenvolvimento web, banco de dados, lógica de programação e engenharia de software.
+              Projeto integrador final: CondoSync — sistema completo de gerenciamento de condomínios com PHP, MySQL,
+              JavaScript e APIs REST.</span>
+          </div>
+          <div class="edu-status-row">
+            <div class="edu-badge done"><span class="bdot"></span> <span data-pt="Concluído"
+                data-en="Completed">Concluído</span></div>
+          </div>
+        </div>
+
+        <div class="edu-item reveal">
+          <div class="edu-item-header">
+            <div class="edu-item-left">
+              <div class="edu-inst-name">Centro Universitário do Norte — UNINORTE</div>
+              <div class="edu-degree-name">Tecnólogo em Design Gráfico</div>
+            </div>
+            <div class="edu-dates">Conclusão: Dezembro de 2019</div>
+          </div>
+          <div class="edu-desc">
+            <span
+              data-pt="Formação em design visual, comunicação, identidade de marca e comunicação visual. Diferencial que agrega à qualidade das interfaces desenvolvidas — pensando tanto em código quanto em experiência do usuário."
+              data-en="Degree in visual design, branding, communication and visual identity. A differentiator that enhances the quality of developed interfaces — thinking about both code and user experience.">Formação
+              em design visual, comunicação, identidade de marca e comunicação visual. Diferencial que agrega à
+              qualidade das interfaces desenvolvidas — pensando tanto em código quanto em experiência do usuário.</span>
+          </div>
+          <div class="edu-status-row">
+            <div class="edu-badge done"><span class="bdot"></span> Concluído</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CURSOS E CERTIFICADOS -->
+      <div class="edu-panel" id="panel-cursos">
+        <div class="curso-card reveal">
+          <span class="curso-icon">▸</span>
+          <div class="curso-info">
+            <div class="curso-title"><span data-pt="Versionamento de Código com Git e GitHub"
+                data-en="Code Versioning with Git and GitHub">Versionamento de Código com Git e GitHub</span></div>
+            <div class="curso-plat">Bootcamp Rihappy · DIO</div>
+          </div>
+        </div>
+        <div class="curso-card reveal">
+          <span class="curso-icon">▸</span>
+          <div class="curso-info">
+            <div class="curso-title"><span data-pt="HTML, CSS e JavaScript para Iniciantes"
+                data-en="HTML, CSS and JavaScript for Beginners">HTML, CSS e JavaScript para Iniciantes</span></div>
+            <div class="curso-plat">Udemy</div>
+          </div>
+        </div>
+        <div class="curso-card reveal">
+          <span class="curso-icon">▸</span>
+          <div class="curso-info">
+            <div class="curso-title"><span data-pt="Lógica de Programação e Algoritmos com JavaScript"
+                data-en="Programming Logic and Algorithms with JavaScript">Lógica de Programação e Algoritmos com
+                JavaScript</span></div>
+            <div class="curso-plat">Udemy</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── TECNOLOGIAS ── -->
+  <section id="tecnologias">
+    <div class="container">
+      <div class="section-label">// <span data-pt="Tecnologias" data-en="Technologies">Tecnologias</span></div>
+      <h2 class="section-title">Stack <span data-pt="Técnica" data-en="Technical">Técnica</span></h2>
+      <p class="section-sub" data-pt="Linguagens, frameworks e ferramentas que utilizo no meu dia a dia."
+        data-en="Languages, frameworks and tools I use in my day to day.">Linguagens, frameworks e ferramentas que
+        utilizo no meu dia a dia.</p>
+
+      <div class="tech-sections reveal">
+        <div class="tech-block">
+          <div class="tech-block-title" data-pt="Frontend" data-en="Frontend">Frontend</div>
+          <div class="tech-icons">
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#DD0031" d="M64 0L8.158 22.401l8.635 74.906L64 128l47.207-30.693 8.635-74.906z" />
+                <path fill="#C3002F" d="M64 0v128l47.207-30.693 8.635-74.906z" />
+                <path fill="#fff"
+                  d="M64 14.388L24.963 99.605h14.947l7.989-19.986h32.135l7.989 19.986h14.947L64 14.388zm11.51 53.31H52.49L64 37.9z" />
+              </svg><span class="ti-label">Angular</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#007acc"
+                  d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73l4.6-2.64 3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H29.38v-5a49.19 49.19 0 01.14-5.16c.06-.08 10-.12 22-.1z" />
+              </svg><span class="ti-label">TypeScript</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z" />
+                <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z" />
+                <path fill="#EBEBEB"
+                  d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826z" />
+                <path fill="#fff"
+                  d="M63.966 52.455v13.763h16.963l-1.6 17.884-15.363 4.147v14.319l28.212-7.82.207-2.325 3.234-36.233.335-3.735zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z" />
+              </svg><span class="ti-label">HTML5</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#1572B6"
+                  d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z" />
+                <path fill="#33A9DC" d="M64.001 117.812l36.559-10.138 8.601-96.354H64.001z" />
+                <path fill="#fff"
+                  d="M64.001 51.429H49.648L48.57 38.857h15.431V26.357H35.372l.317 3.564 3.262 36.573h25.05V51.429zm0 35.802l-.26.07-13.129-3.542-.838-9.399H37.189l1.648 18.514 25.144 6.979z" />
+                <path fill="#EBEBEB"
+                  d="M63.966 51.429v13.065h13.129l-1.235 13.841-11.894 3.544v13.58l25.163-6.97.185-2.079 2.9-32.496.305-3.485H63.966zm0-25.072v13.5h25.83l.214-2.398.476-5.324.249-2.778H63.966z" />
+              </svg><span class="ti-label">CSS3</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#C76494" d="M64 0C28.655 0 0 28.655 0 64s28.655 64 64 64 64-28.655 64-64S99.345 0 64 0z" />
+                <path
+                  d="M103.016 70.888c-4.578 0-8.063 2.159-10.43 5.127-.838-1.643-1.96-3.122-3.289-4.258-2.94-2.56-6.777-3.931-11.077-4.757l-1.344-.257c-3.015-.597-5.65-1.16-7.51-2.645-1.674-1.345-2.43-3.156-2.308-5.536.185-3.651 2.87-6.83 6.01-7.65 4.498-1.166 8.806-.124 11.87 2.888 1.584 1.558 2.44 3.415 2.562 5.507.027.45.046.625.06.726h8.174c-.01-.378-.024-.725-.064-1.2-.368-5.177-2.765-9.613-6.929-12.848-3.966-3.081-9.034-4.567-14.834-4.567-1.42 0-2.888.1-4.382.316-5.557.804-10.374 3.567-13.571 7.763-3.068 4.024-4.299 8.975-3.465 13.948.698 4.163 2.89 7.485 6.517 9.877 3.093 2.041 6.92 3.144 10.623 3.811l1.357.247c3.664.673 6.754 1.383 8.852 3.16 1.87 1.577 2.647 3.685 2.37 6.45-.423 4.218-3.812 7.88-7.849 8.73-4.966 1.035-9.553.03-12.625-2.756-1.846-1.69-2.894-3.808-3.116-6.296-.027-.29-.046-.508-.058-.68h-8.178c.015.445.04.856.076 1.274.456 5.536 2.88 10.083 7.003 13.33 3.725 2.941 8.606 4.466 14.164 4.466 1.69 0 3.428-.148 5.18-.455 6.19-1.088 11.547-4.568 14.706-9.543.774-1.24 1.4-2.576 1.863-3.981.575 1.225 1.268 2.38 2.09 3.43 3.063 3.876 7.77 5.78 13.988 5.78.766 0 1.558-.034 2.374-.1 5.655-.448 9.974-2.728 12.09-6.42 1.037-1.81 1.44-3.832 1.14-5.672-.635-3.901-4.007-6.33-9.341-6.703zm3.617 10.215c-.76 1.326-2.726 2.233-5.145 2.428-.43.034-.853.05-1.267.05-3.46 0-5.87-.949-7.167-2.826-.836-1.223-1.312-2.862-1.456-4.998.755-3.657 2.754-6.138 5.876-7.235 1.032-.36 2.122-.508 3.222-.444 2.478.143 4.316 1.137 5.3 2.868.985 1.734.928 4.122-.363 6.157z"
+                  fill="#FFF" />
+              </svg><span class="ti-label">SCSS</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z" />
+                <path fill="#323330"
+                  d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z" />
+              </svg><span class="ti-label">JavaScript</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path
+                  d="M46.508 113.891c-7.424 0-14.985-.426-22.41-1.278a45.04 45.04 0 01-14.844-4.684 28.978 28.978 0 01-5.265-3.538 22.99 22.99 0 01-2.68-2.966 18.94 18.94 0 01-1.31-20.3 23.27 23.27 0 012.34-3.79 25.52 25.52 0 011.585-1.84C1.22 73.08.12 70.596.016 68.03c-.038-.973-.038-1.972 0-2.992.104-2.538 1.195-5.003 3.08-7.43.467-.614.975-1.19 1.545-1.754a25.38 25.38 0 012.367-2.019A19.2 19.2 0 011.21 45.15c-.476-3.7.044-7.427 1.537-10.876a23.76 23.76 0 013.524-5.485 27.46 27.46 0 013.038-2.98 39.96 39.96 0 018.83-5.028c4.618-1.902 9.55-3.063 15.113-3.547a84.87 84.87 0 017.256-.284h8.01V.022H64v16.927h10.047V.022h15.44v16.927h4.688c5.384 0 10.51.474 15.235 1.41 4.682.932 8.837 2.35 12.344 4.218a28.5 28.5 0 016.143 4.41c3.33 3.21 5.42 7.09 6.075 11.228.67 4.234-.047 8.637-2.097 12.712a24.67 24.67 0 01-2.61 4.102c-.509.654-1.06 1.293-1.632 1.887a23.59 23.59 0 013.1 2.57 24.59 24.59 0 012.344 2.987 19.58 19.58 0 012.934 9.615c.046.948.046 1.917 0 2.894a19.59 19.59 0 01-2.91 9.6c-.693 1.12-1.5 2.175-2.39 3.098a24.37 24.37 0 01-3.069 2.572c1.946 3.904 2.712 8.18 2.154 12.336-.584 4.35-2.617 8.333-5.885 11.535a29.48 29.48 0 01-5.876 4.287c-3.486 1.927-7.514 3.373-11.979 4.298-4.585.948-9.637 1.431-15.02 1.431H79.44v17.1H64v-17.1H48.452v17.1H33.012v-17.1h-6.097zm17.984-28.447H79.44c5.413 0 9.762-.867 12.928-2.578 3.11-1.68 4.684-4.185 4.684-7.446 0-3.278-1.537-5.794-4.567-7.472-2.973-1.646-7.306-2.481-12.882-2.481H64.492V85.444zm0-37.348h13.524c4.862 0 8.75-.772 11.557-2.294 2.741-1.484 4.131-3.706 4.131-6.604 0-2.914-1.355-5.15-4.027-6.646-2.74-1.534-6.65-2.31-11.619-2.31h-13.566V48.096z"
+                  fill="#7952b3" />
+              </svg><span class="ti-label">Bootstrap</span></div>
+          </div>
+        </div>
+
+        <div class="tech-block">
+          <div class="tech-block-title" data-pt="Backend" data-en="Backend">Backend</div>
+          <div class="tech-icons">
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#777BB3"
+                  d="M0 64c0 18.593 28.654 33.667 64 33.667 35.346 0 64-15.074 64-33.667 0-18.593-28.654-33.667-64-33.667C28.654 30.333 0 45.407 0 64z" />
+                <path fill="#fff"
+                  d="M34.772 71.289h6.687l-4.35 22.11h-6.687zm10.93 0h11.44c2.898 0 5.18.816 6.844 2.449 1.664 1.632 2.496 3.897 2.496 6.793 0 4.063-1.108 7.248-3.323 9.558-2.216 2.31-5.242 3.465-9.078 3.465H42.064l2.64-22.265zm5.796 5.25l-1.87 11.615h3.015c1.99 0 3.527-.616 4.61-1.848 1.082-1.232 1.623-3.023 1.623-5.373 0-1.524-.35-2.671-1.05-3.44-.7-.77-1.75-1.155-3.15-1.155h-3.178zm18.217-5.25H81.4c2.898 0 5.18.816 6.844 2.449 1.664 1.632 2.496 3.897 2.496 6.793 0 4.063-1.108 7.248-3.323 9.558-2.216 2.31-5.242 3.465-9.078 3.465H66.375l2.34-22.265zm5.797 5.25l-1.87 11.615h3.015c1.99 0 3.527-.616 4.61-1.848 1.082-1.232 1.623-3.023 1.623-5.373 0-1.524-.35-2.671-1.05-3.44-.7-.77-1.75-1.155-3.15-1.155h-3.178z" />
+              </svg><span class="ti-label">PHP</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128" fill="none">
+                <rect width="128" height="128" rx="10" fill="#74b144" /><text x="50%" y="55%" dominant-baseline="middle"
+                  text-anchor="middle" font-family="monospace" font-weight="bold" font-size="28"
+                  fill="white">Slim</text>
+              </svg><span class="ti-label">Slim</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128" fill="none">
+                <rect width="128" height="128" rx="10" fill="#2a2a2a" stroke="#D4C5B0" stroke-width="2" /><text x="50%"
+                  y="42%" dominant-baseline="middle" text-anchor="middle" font-family="monospace" font-weight="bold"
+                  font-size="20" fill="#D4C5B0">REST</text><text x="50%" y="65%" dominant-baseline="middle"
+                  text-anchor="middle" font-family="monospace" font-size="14" fill="#8C1946">API</text>
+              </svg><span class="ti-label">REST API</span></div>
+          </div>
+        </div>
+
+        <div class="tech-block">
+          <div class="tech-block-title" data-pt="Banco de Dados" data-en="Database">Banco de Dados</div>
+          <div class="tech-icons">
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#00618A"
+                  d="M2 2v124h124V2H2zm111.3 34.7c-2.3 2.5-4.9 4.5-7.7 6.1v1.8H5.5V5.5h115.8v31.2h-8zm-89.5 51.1c-1.8-1.1-4.6-1.7-8.4-1.7-1 0-2.1.1-3.2.2v-2.9h11.5v-5.6H6.7v22.8h6.6v-9.2c.7-.1 1.3-.1 1.9-.1 2.4 0 3.5.8 3.5 2.5 0 .7-.2 1.5-.6 2.2l5.5 1.6c.6-1.3.9-2.7.9-4.2-.1-2.7-1-4.7-2.7-5.6zm7.4-10.2v22.8h11c4.1 0 7.1-.8 9-2.4 1.9-1.6 2.8-4 2.8-7.4 0-3.3-.9-5.8-2.8-7.3-1.9-1.6-4.8-2.4-8.6-2.4l-11.4-.3zm11.8 17.5h-5.1v-12h4.9c1.7 0 3 .5 3.8 1.4.8.9 1.2 2.2 1.2 3.9 0 3.5-1.6 6.7-4.8 6.7zm24.8-19.5H60c-1.7 0-2.6.2-3.5.4v2.1h3.5v13.4h-3.5v2.1h11.2v-2.1H64v-5.3c.4 0 .9.1 1.5.1 2.3 0 4.4-.7 5.8-2 1.4-1.3 2.1-2.8 2.1-5.1 0-1.9-.6-3.5-1.7-4.6-1.2-1.1-2.7-1.1-4.9-1.1z" />
+              </svg><span class="ti-label">MySQL</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128" fill="none">
+                <rect width="128" height="128" rx="10" fill="#CC2927" /><text x="50%" y="42%" dominant-baseline="middle"
+                  text-anchor="middle" font-family="monospace" font-weight="bold" font-size="18"
+                  fill="white">SQL</text><text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle"
+                  font-family="monospace" font-size="12" fill="white">Server</text>
+              </svg><span class="ti-label">SQL Server</span></div>
+          </div>
+        </div>
+
+        <div class="tech-block">
+          <div class="tech-block-title" data-pt="Ferramentas" data-en="Tools">Ferramentas</div>
+          <div class="tech-icons">
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#F34F29"
+                  d="M124.742 58.378L69.625 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.685 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993L87.81 55.916c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.046 47.387v36.177a9.677 9.677 0 012.559 1.602c3.778 3.777 3.778 9.898 0 13.678-3.779 3.777-9.904 3.777-13.679 0-3.778-3.78-3.778-9.901 0-13.678a9.663 9.663 0 013.167-2.11V47.014a9.658 9.658 0 01-3.167-2.11c-2.862-2.861-3.551-7.06-2.083-10.576L41.056 19.666 3.264 57.456c-3.172 3.174-3.172 8.32 0 11.498l55.117 55.117c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858c3.174-3.176 3.174-8.322.004-11.835z" />
+              </svg><span class="ti-label">Git</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#fff"
+                  d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z" />
+              </svg><span class="ti-label">GitHub</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#FFA000"
+                  d="M4.915 88.013l9.702-67.094a1.985 1.985 0 013.577-.803l10.124 17.39 4.547-8.627a1.985 1.985 0 013.528 0L88.085 128H4.915z" />
+                <path fill="#F57C00"
+                  d="M63.194 76.446L46.393 45.879a1.984 1.984 0 00-3.528 0l-4.547 8.627L28.194 37.116a1.985 1.985 0 00-3.577.803L14.915 105.006z" />
+                <path fill="#FFCA28"
+                  d="M121.085 88.013L98.298 12.38a1.985 1.985 0 00-3.411-.574L4.915 128h116.17a2 2 0 00.003-1.99z" />
+              </svg><span class="ti-label">Firebase</span></div>
+            <div class="ti"><svg viewBox="0 0 128 128">
+                <path fill="#0065A9"
+                  d="M90.767 127.126a10.577 10.577 0 007.099-.283l26.588-12.681c2.952-1.409 4.853-4.425 4.853-7.674V21.512c0-3.249-1.901-6.265-4.853-7.674L97.866 1.157a10.564 10.564 0 00-10.765 1.27L9.212 66.751c-3.602 2.797-3.602 8.178 0 10.975l10.573 8.21-13.416 4.107c-2.972.91-4.369 4.401-2.887 7.107l9.512 17.43c1.48 2.706 4.931 3.663 7.566 2.092l13.225-7.86L33.785 109l39.6 16.56a10.582 10.582 0 0017.382-1.434zM96.065 36.795l-58.878 36.044L20.28 59.365l75.785-22.57zM20.065 68.796l58.858 36.045-30.535 9.24zm62.255 42.18L60.797 97.97l21.523-13.18z" />
+              </svg><span class="ti-label">VS Code</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ── -->
+  <section id="sobre">
+    <div class="container">
+      <div class="section-label">// <span data-pt="Sobre" data-en="About">Sobre</span></div>
+      <h2 class="section-title"><span data-pt="Sobre" data-en="About">Sobre</span> <span data-pt="Mim"
+          data-en="Me">Mim</span></h2>
+
+      <div class="sobre-grid reveal">
+        <div class="sobre-text">
+          <p><span
+              data-pt="Sou desenvolvedora fullstack com formação em Análise e Desenvolvimento de Sistemas pelo SENAI/SC e Tecnóloga em Design Gráfico — uma combinação que me permite pensar tanto na lógica do sistema quanto na experiência visual do produto."
+              data-en="I'm a fullstack developer with a background in Systems Analysis and Development from SENAI/SC and a degree in Graphic Design — a combination that lets me think about both system logic and the visual experience of the product.">Sou
+              desenvolvedora fullstack com formação em Análise e Desenvolvimento de Sistemas pelo SENAI/SC e Tecnóloga
+              em Design Gráfico — uma combinação que me permite pensar tanto na lógica do sistema quanto na experiência
+              visual do produto.</span></p>
+          <p><span
+              data-pt="Atuo como Desenvolvedora Júnior Fullstack na Siah Software &amp; Serviços, onde desenvolvo interfaces com Angular e TypeScript no frontend e construo APIs com PHP/Slim e SQL Server no backend. Cada projeto é uma oportunidade de entregar soluções integradas e funcionais."
+              data-en="I work as a Junior Fullstack Developer at Siah Software &amp; Serviços, building interfaces with Angular and TypeScript on the frontend and APIs with PHP/Slim and SQL Server on the backend. Each project is an opportunity to deliver integrated, functional solutions.">Atuo
+              como Desenvolvedora Júnior Fullstack na Siah Software &amp; Serviços, onde desenvolvo interfaces com
+              Angular e TypeScript no frontend e construo APIs com PHP/Slim e SQL Server no backend. Cada projeto é uma
+              oportunidade de entregar soluções integradas e funcionais.</span></p>
+          <p><span
+              data-pt="Acredito em código limpo, soluções bem estruturadas e na importância de entregar sistemas que realmente funcionem para quem os usa."
+              data-en="I believe in clean code, well-structured solutions and the importance of delivering systems that truly work for those who use them.">Acredito
+              em código limpo, soluções bem estruturadas e na importância de entregar sistemas que realmente funcionem
+              para quem os usa.</span></p>
+
+          <div class="lang-section">
+            <div class="section-label" style="margin-bottom:20px;">// <span data-pt="Idiomas"
+                data-en="Languages">Idiomas</span></div>
+            <div class="lang-row">
+              <div class="lang-head"><span class="lang-name-t">Português</span><span class="lang-lvl-t" data-pt="NATIVO"
+                  data-en="NATIVE">NATIVO</span></div>
+              <div class="lang-bar">
+                <div class="lang-fill" style="width:100%"></div>
+              </div>
+            </div>
+            <div class="lang-row">
+              <div class="lang-head"><span class="lang-name-t">Inglês</span><span class="lang-lvl-t"
+                  data-pt="INTERMEDIÁRIO" data-en="INTERMEDIATE">INTERMEDIÁRIO</span></div>
+              <div class="lang-bar">
+                <div class="lang-fill" style="width:60%"></div>
+              </div>
+            </div>
+            <div class="lang-row">
+              <div class="lang-head"><span class="lang-name-t">Espanhol</span><span class="lang-lvl-t" data-pt="BÁSICO"
+                  data-en="BASIC">BÁSICO</span></div>
+              <div class="lang-bar">
+                <div class="lang-fill" style="width:25%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-d2" style="display:flex;flex-direction:column;align-items:center;">
+          <div class="sobre-photo-frame">
+            <img src="assets/img/vitoria.jpg" alt="Vitoria Maria" />
+          </div>
+          <p class="sobre-quote"><span
+              data-pt="&quot;Código limpo é a diferença entre uma solução e uma obra de arte.&quot;"
+              data-en="&quot;Clean code is the difference between a solution and a work of art.&quot;">&quot;Código
+              limpo é a diferença entre uma solução e uma obra de arte.&quot;</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATO ── -->
+  <section id="contato">
+    <div class="container">
+      <div class="contato-inner">
+        <div class="section-label" style="text-align:center;margin-bottom:10px;">// <span data-pt="Contato"
+            data-en="Contact">Contato</span></div>
+        <h2 class="section-title reveal" style="margin-bottom:20px;"><span data-pt="Vamos" data-en="Let's">Vamos</span>
+          <span data-pt="Conversar" data-en="Talk">Conversar</span>
+        </h2>
+        <p class="contato-desc reveal"><span data-pt="Estou aberta a novas oportunidades, projetos e colaborações."
+            data-en="I'm open to new opportunities, projects and collaborations.">Estou aberta a novas oportunidades,
+            projetos e colaborações.</span><br><span data-pt="Se você tem algo interessante em mente, entre em contato!"
+            data-en="If you have something interesting in mind, get in touch!">Se você tem algo interessante em mente,
+            entre em contato!</span></p>
+        <div class="contato-links reveal">
+          <a href="mailto:vitoriapassos42@gmail.com" class="contato-link">vitoriapassos42@gmail.com</a>
+          <a href="tel:+5592985408462" class="contato-link">(92) 98540-8462</a>
+        </div>
+        <div class="contato-socials reveal">
+          <a href="https://www.linkedin.com/in/vitoria-passos-179610254/" target="_blank" rel="noopener">LinkedIn</a>
+          <span style="color:rgba(212,197,176,.2)">·</span>
+          <a href="https://github.com/ViviPassos" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-copy"><span data-pt="Desenvolvido por Vitoria Maria © 2025"
+          data-en="Developed by Vitoria Maria © 2025">Desenvolvido por Vitoria Maria © 2025</span></div>
+      <div class="footer-social">
+        <a href="https://github.com/ViviPassos" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/vitoria-passos-179610254/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
