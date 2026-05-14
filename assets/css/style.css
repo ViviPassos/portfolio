@@ -1,9 +1,38 @@
 :root {
-    --base: #1E1E1E;
-    --card-bg: #252525;
+    --base: #F5F2EE;
+    --card-bg: #EDEAE4;
     --identity: #8C1946;
-    --accent: #D4C5B0;
-    --white: #F0EBE3;
+    --accent: #5A5550;
+    --white: #1C1C1C;
+
+    /* Variáveis semânticas derivadas */
+    --text-primary: rgba(28, 28, 28, 1);
+    --text-secondary: rgba(28, 28, 28, 0.65);
+    --text-muted: rgba(28, 28, 28, 0.45);
+    --text-faint: rgba(28, 28, 28, 0.30);
+
+    --border-subtle: rgba(28, 28, 28, 0.10);
+    --border-soft: rgba(28, 28, 28, 0.20);
+    --grid-line: rgba(28, 28, 28, 0.05);
+    --grid-strong: rgba(140, 25, 70, 0.08);
+}
+
+/* Navbar e Footer mantêm escuro */
+nav,
+footer {
+    background: rgba(20, 20, 20, 0.97) !important;
+    border-color: var(--identity) !important;
+}
+
+.nav-logo,
+.nav-links a,
+.nav-social a {
+    color: #F5F2EE !important;
+}
+
+.footer-copy,
+.footer-social a {
+    color: rgba(245, 242, 238, 0.35) !important;
 }
 
 *,
@@ -32,8 +61,8 @@ body::before {
     position: fixed;
     inset: 0;
     background-image:
-        linear-gradient(rgba(212, 197, 176, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212, 197, 176, 0.04) 1px, transparent 1px),
+        linear-gradient(rgba(28, 28, 28, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(28, 28, 28, 0.05) 1px, transparent 1px),
         linear-gradient(rgba(140, 25, 70, 0.08) 1px, transparent 1px),
         linear-gradient(90deg, rgba(140, 25, 70, 0.08) 1px, transparent 1px);
     background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
@@ -75,7 +104,7 @@ body::before {
 .pre-bar-wrap {
     width: 260px;
     height: 1px;
-    background: rgba(212, 197, 176, 0.15);
+    background: rgba(28, 28, 28, 0.15);
     overflow: hidden;
 }
 
@@ -276,7 +305,7 @@ section {
 
 .section-sub {
     font-size: 1rem;
-    color: rgba(240, 235, 227, .5);
+    color: var(--text-muted);
     max-width: 520px;
     line-height: 1.65;
     margin-bottom: 60px;
@@ -305,7 +334,7 @@ section {
     font-family: 'Roboto Mono', monospace;
     font-size: .68rem;
     color: var(--accent);
-    border: 1px solid rgba(212, 197, 176, .22);
+    border: 1px solid var(--border-soft);
     padding: 4px 10px;
     letter-spacing: 1px;
     transition: border-color .2s, color .2s;
@@ -382,7 +411,7 @@ section {
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
     font-size: 1.35rem;
-    color: rgba(240, 235, 227, .5);
+    color: var(--text-muted);
     letter-spacing: -.3px;
     animation: slideRoles 9s infinite;
 }
@@ -421,7 +450,7 @@ section {
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--base);
     background: var(--identity);
     border: none;
     padding: 16px 38px;
@@ -452,9 +481,60 @@ section {
 }
 
 /* ── PROJETOS — SCROLL HORIZONTAL ── */
+
+.proj-outer {
+    position: relative;
+}
+
 .proj-track-wrap {
     position: relative;
-    /* fade edges */
+    overflow: hidden;
+}
+
+.proj-arrow-float,
+.proj-arrow-float-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border-soft);
+    background: var(--card-bg);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color .2s, color .2s, opacity .3s, transform .2s;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.proj-arrow-float {
+    right: 16px;
+}
+
+.proj-arrow-float-left {
+    left: 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.proj-arrow-float:hover,
+.proj-arrow-float-left:hover {
+    border-color: var(--identity);
+    color: var(--identity);
+}
+
+.proj-arrow-float.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.proj-outer.can-left .proj-arrow-float-left {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .proj-track-wrap::after {
@@ -477,18 +557,27 @@ section {
     padding-right: 80px;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--identity) var(--border-subtle);
 }
 
 .proj-track::-webkit-scrollbar {
-    display: none;
+    height: 2px;
+}
+
+.proj-track::-webkit-scrollbar-track {
+    background: var(--border-subtle);
+}
+
+.proj-track::-webkit-scrollbar-thumb {
+    background: var(--identity);
 }
 
 .proj-card {
     flex-shrink: 0;
     width: 380px;
+    border-color: var(--border-subtle);
     background: var(--card-bg);
-    border: 1px solid rgba(212, 197, 176, .1);
     overflow: hidden;
     position: relative;
     transition: border-color .3s, transform .3s;
@@ -572,7 +661,7 @@ section {
 
 .proj-desc {
     font-size: .92rem;
-    color: rgba(240, 235, 227, .55);
+    color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 18px;
 }
@@ -612,7 +701,7 @@ section {
 .proj-dot {
     width: 24px;
     height: 2px;
-    background: rgba(212, 197, 176, .2);
+    background: var(--border-soft);
     transition: background .3s, width .3s;
     cursor: pointer;
     border: none;
@@ -678,7 +767,7 @@ section {
 
 .tl-card {
     background: var(--card-bg);
-    border: 1px solid rgba(212, 197, 176, .1);
+    border: 1px solid var(--border-subtle);
     padding: 28px 30px;
     transition: border-color .3s;
 }
@@ -708,7 +797,7 @@ section {
 }
 
 .tl-status.done {
-    color: rgba(212, 197, 176, .4);
+    color: var(--text-faint);
 }
 
 .tl-date {
@@ -737,7 +826,7 @@ section {
 
 .tl-desc {
     font-size: .95rem;
-    color: rgba(240, 235, 227, .58);
+    color: var(--text-secondary);
     line-height: 1.78;
     margin-bottom: 16px;
 }
@@ -753,7 +842,7 @@ section {
     display: flex;
     gap: 0;
     margin-bottom: 40px;
-    border-bottom: 1px solid rgba(212, 197, 176, .12);
+    border-bottom: 1px solid var(--border-subtle);
 }
 
 .edu-tab {
@@ -762,7 +851,7 @@ section {
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(212, 197, 176, .5);
+    color: var(--white);
     padding: 12px 28px;
     background: none;
     border: none;
@@ -798,7 +887,7 @@ section {
 /* Card no estilo Nicolas */
 .edu-item {
     background: var(--card-bg);
-    border: 1px solid rgba(212, 197, 176, .1);
+    border: 1px solid var(--border-subtle);
     padding: 28px 32px;
     transition: border-color .3s;
     display: flex;
@@ -831,7 +920,7 @@ section {
 
 .edu-degree-name {
     font-size: .95rem;
-    color: rgba(240, 235, 227, .6);
+    color: var(--text-secondary);
     font-style: italic;
     margin-bottom: 0;
 }
@@ -847,7 +936,7 @@ section {
 
 .edu-desc {
     font-size: .93rem;
-    color: rgba(240, 235, 227, .55);
+    color: var(--text-secondary);
     line-height: 1.75;
 }
 
@@ -877,13 +966,13 @@ section {
 }
 
 .edu-badge.done {
-    color: rgba(212, 197, 176, .4);
+    color: var(--text-faint);
 }
 
 /* Cursos — cards estilo Nicolas */
 .curso-card {
     background: var(--card-bg);
-    border: 1px solid rgba(212, 197, 176, .1);
+    border: 1px solid var(--border-subtle);
     padding: 22px 28px;
     display: flex;
     align-items: flex-start;
@@ -929,7 +1018,7 @@ section {
 
 .tech-block {
     background: var(--card-bg);
-    border: 1px solid rgba(212, 197, 176, .1);
+    border: 1px solid var(--border-subtle);
     padding: 28px 32px;
     transition: border-color .3s;
 }
@@ -994,7 +1083,7 @@ section {
 
 .sobre-text p {
     font-size: 1rem;
-    color: rgba(240, 235, 227, .68);
+    color: var(--text-secondary);
     line-height: 1.85;
     margin-bottom: 22px;
 }
@@ -1045,7 +1134,7 @@ section {
     margin-top: 18px;
     font-family: 'Archivo', sans-serif;
     font-size: .82rem;
-    color: rgba(212, 197, 176, .45);
+    color: var(--text-faint);
     font-style: italic;
     line-height: 1.55;
     text-align: center;
@@ -1081,7 +1170,7 @@ section {
 
 .lang-bar {
     height: 1px;
-    background: rgba(212, 197, 176, .12);
+    background: var(--border-subtle);
 }
 
 .lang-fill {
@@ -1101,7 +1190,7 @@ section {
 
 .contato-desc {
     font-size: 1.05rem;
-    color: rgba(240, 235, 227, .58);
+    color: var(--text-secondary);
     line-height: 1.78;
     margin-bottom: 44px;
 }
@@ -1119,7 +1208,7 @@ section {
     font-size: .8rem;
     color: var(--accent);
     text-decoration: none;
-    border: 1px solid rgba(212, 197, 176, .18);
+    border: 1px solid var(--border-subtle);
     padding: 14px 26px;
     letter-spacing: .5px;
     transition: border-color .2s, color .2s;
@@ -1139,7 +1228,7 @@ section {
 .contato-socials a {
     font-family: 'Roboto Mono', monospace;
     font-size: .72rem;
-    color: rgba(212, 197, 176, .4);
+    color: var(--text-faint);
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1277,7 +1366,7 @@ footer {
 }
 
 .lang-btn:hover {
-    color: var(--white);
+    color: var(--base);
     border-color: var(--accent);
 }
 
@@ -1312,11 +1401,11 @@ footer {
 
 .lang-option:hover {
     background: rgba(140, 25, 70, .15);
-    color: var(--white);
+    color: var(--base);
 }
 
 .lang-option.active {
-    color: var(--white);
+    color: var(--base);
 }
 
 .lang-flag {

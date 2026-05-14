@@ -35,22 +35,33 @@ document.querySelectorAll('.edu-tab').forEach(tab => {
     });
 });
 
-// PROJ SCROLL DOTS
+// PROJ SCROLL — floating arrows like Nicolas
 const track = document.getElementById('projTrack');
-const dots = document.querySelectorAll('.proj-dot');
-dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-        const idx = parseInt(dot.dataset.idx);
-        const card = track.children[idx];
-        track.scrollTo({ left: card.offsetLeft - 40, behavior: 'smooth' });
-    });
+const projWrap = document.getElementById('projWrap');
+const arrowRight = document.getElementById('projArrow');
+const arrowLeft = document.getElementById('projArrowLeft');
+const projOuter = document.querySelector('.proj-outer');
+
+function updateArrows() {
+    const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+    const atStart = track.scrollLeft <= 8;
+    arrowRight.classList.toggle('hidden', atEnd);
+    projOuter.classList.toggle('can-left', !atStart);
+}
+
+const cardWidth = () => (track.children[0]?.offsetWidth || 380) + 24;
+
+arrowRight.addEventListener('click', () => {
+    track.scrollBy({ left: cardWidth(), behavior: 'smooth' });
 });
-track.addEventListener('scroll', () => {
-    const scrollLeft = track.scrollLeft;
-    const cardWidth = track.children[0]?.offsetWidth + 24 || 404;
-    const activeIdx = Math.round(scrollLeft / cardWidth);
-    dots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
+
+arrowLeft.addEventListener('click', () => {
+    track.scrollBy({ left: -cardWidth(), behavior: 'smooth' });
 });
+
+track.addEventListener('scroll', updateArrows);
+window.addEventListener('resize', updateArrows);
+updateArrows();
 
 // ── LANGUAGE SWITCHER ──
 const langBtn = document.getElementById('langBtn');
